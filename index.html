@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+       <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title></title> Calculadora de volumen
+      <style>
+        :root {
+          --circulo-hijo: rgba(255, 255, 255, 0.7);
+          --liston-info: #FFFFFF;
+          --liston-sombra: 5px 10px rgba(0,0,0, 0.2);
+        }
+        .infografia {
+          display: flex;
+        }
+        .circulo-padre {
+          border-radius: 50%;
+          width: 200px;
+          height: 200px;
+          position: relative;
+        }
+        .circulo-hijo {
+          background-color: var(--circulo-hijo);
+          border-radius: 50%;
+          width: 170px;
+          height: 170px;
+          position: absolute;
+          top: 15px;
+          left: 15px;
+        }
+        .circulo-nieto {
+          background-color: #F5B014;
+          border-radius: 50%;
+          height: 100px;
+          width: 100px;
+          position: absolute;
+          top: 34px;
+          left: 34px;
+        }
+        .liston-informacion {
+          position: absolute;
+          height: 180px;
+          width: 110px;
+          background-color: var(--liston-info);
+          top: 30px;
+          left: 30px;
+          border-radius: 55px 55px 60px 60px;
+          box-shadow: var(--liston-sombra);
+        }
+                }
+        .circulo-padre:nth-child(2) .circulo-nieto{
+          background-color: #F85B26;
+        }
+        /*modificación 3*/
+        .circulo-padre:first-child .circulo-nieto {
+          background-color: #2a8000;
+        }
+        .circulo-padre:first-child {
+          background-color: #008000;
+        }
+      </style>
+    </head>
+    <body>
+    <section class="infografia">
+      <div class="circulo-padre">
+      <div class="circulo-hijo">
+          <div class="liston-informacion"></div>
+        <div class="circulo-nieto">
+        </div>
+         </div>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>UNSIJ</h1>
+    </div>
+<div>
+  <div>
+    <div>
+      <div>
+<label for="diametro">Diámetro Normal (cm):</label>
+<input type="number" id="diametro" step="0.01" min="0">
+</div>
+<div>
+<label for="altura">Altura Total (m):</label>
+<input type="number" id="altura" step="0.01" min="0">
+</div>
+<button onclick="calcularVolumen()">Calcular Volumen</button>
+<p id="resultado"></p>
+<p class="small-text"></p>
+<script src="script.js"></script>
+</body>
+</html>
